@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/rv_item_container"
+    android:background="@drawable/style_item"
+    android:layout_margin="10dp"
+    android:gravity="center_vertical"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="40dp">
+
+
+    <TextView
+        android:id="@+id/item_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="left"
+        android:layout_toLeftOf="@id/item_waterBall"
+        android:text="你好"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:textSize="43sp"
+        android:textColor="@color/text_color"
+        />
+
+    <TextView
+        android:id="@+id/item_deadLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_target"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tool:text="目标日:2022/12/11"
+        android:textColor="@color/text_color"
+        android:textSize="18sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_waterBall"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:padding="1dp"
+        android:src="@drawable/item_water_ball"
+        app:shapeAppearanceOverlay="@style/circleImageStyle" />
+    <TextView
+        android:id="@+id/item_countDownTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/item_waterBall"
+        android:layout_alignParentBottom="true"
+        android:maxLines="1"
+        tool:text="还剩33天"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:paddingLeft="5dp"
+        android:textSize="23sp" />
+
+</RelativeLayout>

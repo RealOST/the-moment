@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/rv_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/style_item"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <com.example.appdevelopmenttwo.custom.MarqueeTextview
+            android:id="@+id/item_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鸡你太美"
+            android:textColor="@color/text_color"
+            android:textSize="35sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <com.example.appdevelopmenttwo.custom.MarqueeTextview
+            android:id="@+id/item_deadLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tool:text="目标日:2022/12/11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="35dp"
+        android:gravity="center">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_waterBall"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:padding="3dp"
+            android:src="@drawable/item_water_ball"
+            app:shapeAppearanceOverlay="@style/circleImageStyle" />
+
+        <com.example.appdevelopmenttwo.custom.MarqueeTextview
+            android:id="@+id/item_countDownTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textSize="21sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tool:text="还剩33天" />
+    </LinearLayout>
+
+</LinearLayout>

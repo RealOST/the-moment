@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/login"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:theme="@style/Theme.MD3Theme.NoActionBar"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="40dp"
+        android:background="@drawable/gradual_radius">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+            app:startIconTint="@color/teal_200"
+            android:hint="邮箱/手机号">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/icon_lock_open"
+            app:startIconTint="@color/teal_200"
+            android:hint="登录密码">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_remember"
+            android:text="记住密码"
+            android:textSize="15sp"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_login"
+            android:text="自动登录"
+            android:textSize="15sp"
+            android:layout_marginLeft="50dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+        app:cornerRadius="10dp"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:onClick="login"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:backgroundTint="@color/blue_sky_400"
+        app:rippleColor="@color/blue_sky_200"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/button_cancel"
+            android:text="新用户注册"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/blue_200"
+            android:clickable="true"
+            android:onClick="toRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            />
+        <TextView
+            android:id="@+id/button_login"
+            android:text="忘记密码？"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="70dp"
+        android:text="游客进入>"
+        android:onClick="jumpToSample2"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
