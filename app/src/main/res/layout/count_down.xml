@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tv_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_colon1"
+        android:background="#c2c2c2"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:padding="@dimen/dp3"
+        tools:text="23"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_colon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:includeFontPadding="false"
+        android:layout_toLeftOf="@+id/tv_minutes"
+        android:text=":"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp3"
+        android:layout_toLeftOf="@+id/tv_colon2"
+        android:background="#c2c2c2"
+        android:gravity="center"
+        tools:text="59"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_colon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:layout_toLeftOf="@+id/tv_seconds"
+        android:text=":"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp3"
+        android:includeFontPadding="false"
+        android:background="#c2c2c2"
+        android:gravity="center"
+        tools:text="59"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

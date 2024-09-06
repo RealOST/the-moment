@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ImageTranslucentTheme"
+    android:background="@drawable/background_day"
+    android:orientation="vertical"
+    tools:context=".ScheduleActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/material_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-15dp"
+        android:background="@drawable/gradual_title"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:menu="@menu/schedule_menu"
+        app:title="行程表"
+        app:titleTextColor="@color/black"
+        app:subtitle="科学计划时间，充实大学生活"
+        app:subtitleTextColor="@color/gray"
+        app:subtitleTextAppearance="@style/Theme.MD3Theme.NoActionBar"
+        app:subtitleCentered="true"
+        app:titleCentered="true"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabMode="auto"
+        app:tabGravity="fill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/home_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
